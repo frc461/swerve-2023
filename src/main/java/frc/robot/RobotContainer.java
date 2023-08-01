@@ -23,7 +23,6 @@ import frc.robot.subsystems.Swerve;
  * subsystems, commands, and trigger mappings) should be declared here.
  */
 public class RobotContainer {
-    // The robot's subsystems and commands are defined here...
     private final Swerve swerve = new Swerve();
 
     /* Controllers */

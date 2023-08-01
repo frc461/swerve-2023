@@ -25,7 +25,7 @@ public final class Constants {
     public static final double stickDeadband = 0.1;
     public static double gyroOffset = 0;
     public static final class Swerve {
-        public static final int pigeonID = 35;
+        public static final int pigeonID = 35; // TODO: SET PIGEON ID
         public static final boolean invertGyro = false; // Always ensure Gyro is CCW+ CW-
 
         public static final COTSFalconSwerveConstants chosenModule =
@@ -80,6 +80,7 @@ public final class Constants {
         public static final double angleKD = chosenModule.angleKD;
         public static final double angleKF = chosenModule.angleKF;
 
+        // TODO: PIDS
         /* Drive Motor PID Values */
         public static final double driveKP = 0.05;
         public static final double driveKI = 0.0;
@@ -108,6 +109,7 @@ public final class Constants {
         public static final CANSparkMax.IdleMode angleNeutralMode = CANSparkMax.IdleMode.kCoast;
         public static final CANSparkMax.IdleMode driveNeutralMode = CANSparkMax.IdleMode.kBrake;
 
+        // TODO: SET MODULE IDS
         /* Module Specific Constants */
         /* Front Left Module - Module 0 */
         public static final class Mod0 {

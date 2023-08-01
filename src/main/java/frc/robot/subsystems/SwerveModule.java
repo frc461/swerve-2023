@@ -143,8 +143,6 @@ public class SwerveModule {
         driveEncoder.setPosition(0.0);
     }
 
-    //everything below here is fine.
-
     public SwerveModuleState getState() {
         return new SwerveModuleState(
                 driveEncoder.getVelocity(),
