@@ -3,7 +3,7 @@ The project for new programmers to design the new robot chassis using swerve dri
 
 
 ## For Programmers:
-Don't worry about this step-by-step guide, especially if you are stressed by seeing this. If so, all you really have to do is copy and paste the swerve code from Rowdy23 into a new branch on this project so that it works. For reference, take a look at the ez500-dev branch.
+Don't worry about this step-by-step guide, especially if you are stressed by seeing this. If so, all you really have to do is copy and paste the swerve code from Rowdy23 into a new branch on this project so that it works. For reference, take a look at the ez500-dev branch (it is important to note that this branch has NOT been tested as of August 1, 2023).
 
 Estimated time to finish branch:
 
