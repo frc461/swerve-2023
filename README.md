@@ -26,7 +26,9 @@ To build a swerve drive train, these are the components needed:
       *1c. max speed/angular velocity, deadband*
     
   2. subsystems/SwerveModule.java (defined by a motor/angle controller/encoder, its ID/port, PID, etc.)
-      
+
+      IMPORTANT:   *CTREConfigs is required. Copy and paste from Rowdy23.*
+
       2a. defines a module as a motor & angle controller with corresponding IDs and connected to the same unit
       
       2c. configures its ID, PID, and offsets (from Constants.java)
@@ -40,7 +42,7 @@ To build a swerve drive train, these are the components needed:
           - setting its "state" would be most used
           - setting its speed, and thus also setting its "state", would require whether its open loop (i.e. it moves in the calculated direction independent from its rotation)
   
-  3. subsystems/Swerve.java Subsystem
+  2. subsystems/Swerve.java Subsystem
 
       3a. uses four swerve modules
       
@@ -50,7 +52,7 @@ To build a swerve drive train, these are the components needed:
         - to drive, requires if it is field relative (driving relative to field or robot), and if it is open loop (using holonomic rotation or not, meaning if the rotation is independent of its driving direction)
 
        3d. integrates pigeon sensor for yaw, pose, odometry, and using all four modules to drive/rotate together
-  4. Swerve Command (e.g. "commands/TeleopSwerve") (since this project uses a command-based framework, a swerve command for Teleop is needed in order to move the robot upon a trigger on a joystick controller)
+  3. Swerve Command (e.g. "commands/TeleopSwerve") (since this project uses a command-based framework, a swerve command for Teleop is needed in order to move the robot upon a trigger on a joystick controller)
       
       4a. Uses an instance of the swerve subsystem to drive the robot based on the translation of where the joystick is
       
@@ -58,7 +60,7 @@ To build a swerve drive train, these are the components needed:
       
       4c. apply deadband, speed caps
   
-  5. Updating RobotContainer.java
+  4. Updating RobotContainer.java
      
       5a. instance of swerve to set its default command (and also for its methods)
       
@@ -68,5 +70,3 @@ To build a swerve drive train, these are the components needed:
       5c. Create an instance of the command in the RobotContainer constructor by setting the default command of the subsystem to a new instance of the TeleopSwerve command that takes in all three axes
       
       5d. (OPTIONAL) Create button bindings for zeroing the gyro (using yaw), autobalancing (creating a target, PID controller, and pitch using pigeon sensors), and a robotcentric toggle/hold-to-enable, and add that as an argument to the swerve command to determine whether to use robot centric driving or not.
-
-  *(uncertain: CTREConfigs, reason: it is its own independent system that is not used for anything other than initialization in Robot.java)*
