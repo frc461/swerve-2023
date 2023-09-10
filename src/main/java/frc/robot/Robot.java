@@ -17,8 +17,8 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
  * the package after creating this project, you must also update the build.gradle file in the
  * project.
  */
-public class Robot extends TimedRobot
-{
+public class Robot extends TimedRobot {
+    public static CTREConfigs ctreConfigs;
     private Command autonomousCommand;
     
     private RobotContainer robotContainer;
@@ -31,6 +31,7 @@ public class Robot extends TimedRobot
     @Override
     public void robotInit()
     {
+        ctreConfigs = new CTREConfigs();
         // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
         // autonomous chooser on the dashboard.
         robotContainer = new RobotContainer();
